@@ -1,0 +1,348 @@
+/* Table container */
+.table-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.table-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+.employee-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Table header */
+.employee-table thead {
+  background-color: #715A5A;
+  color: white;
+}
+
+.employee-table th {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table rows */
+/* Arrow cell */
+
+
+.arrow-cell {
+  width: 30px;
+  text-align: center;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.arrow.down {
+  transform: rotate(90deg);
+}
+.employee-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.employee-table tr:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.employee-table tr.expanded {
+  background-color: #f1f1f1;
+  transition: background 0.3s ease;
+}
+
+/* Action buttons */
+.btn {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s ease;
+  margin-right: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-edit {
+  background-color: #d8d627;
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: #a1b31a;
+}
+
+.btn-delete {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71d2a;
+}
+
+/* Expandable row */
+.expand-row {
+  background-color: #fafafa;
+  border-bottom: 1px solid #ddd;
+  animation: expand 0.3s ease;
+}
+
+.expand-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Animation */
+@keyframes expand {
+  from { opacity: 0; transform: scaleY(0.95); }
+  to { opacity: 1; transform: scaleY(1); }
+}
+
+
+/**************************************/
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between; /* places Add button on the right */
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.header .logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Add button */
+.btn-add {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.btn-add:hover {
+  background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.add-employee-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.add-employee-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.add-employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.add-employee-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.add-employee-form input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.add-employee-form input:focus {
+  border-color: #007bff;
+}
+
+.add-employee-form button {
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-employee-form button:hover {
+  background: #0056b3;
+}
+
+
+.edit-employee-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px 30px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-employee-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.edit-employee-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-employee-form label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.edit-employee-form input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.edit-employee-form input:focus {
+  border-color: #007bff;
+}
+
+.edit-employee-form input[readonly] {
+  background-color: #f5f5f5;
+  color: #555;
+  cursor: not-allowed;
+}
+
+.edit-employee-form button {
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.edit-employee-form button:hover {
+  background: #1e7e34;
+}
+
+
+/* Full-page flexbox */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make content take available space */
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Sticky footer */
+.footer {
+  background-color: #222;
+  color: #bbb;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto; /* pushes footer to bottom */
+}
+
+/************************************/
+
+
+/* .header {
+  height: 100px;
+  background-color: black;
+  color: white;
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.header h1 {
+  margin-left: 30px;
+  line-height: 100px;
+}
+.footer {
+  height: 50px;
+  background-color: black;
+  color: white;
+}
+.footer h3 {
+  line-height: 50px;
+}
+.content {
+  height: 440px;
+  border: 1px solid black;
+}
+table {
+  margin-left: 350px;
+  margin-top: 50px;
+}
+input[type="text"] {
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  height: 35px;
+  width: 100px;
+} */
